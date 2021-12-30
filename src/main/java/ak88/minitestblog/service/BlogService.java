@@ -5,4 +5,5 @@ import ak88.minitestblog.model.Status;
 
 public interface BlogService extends iGeneralService<Blog> {
     Iterable<Blog> findAllByStatus(Status status);
+    Iterable<Blog> findAllByTitleContaining(String title);
 }

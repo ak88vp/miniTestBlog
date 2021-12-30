@@ -3,8 +3,86 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-</head>
-<body>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Imperial+Script&family=Pushster&display=swap" rel="stylesheet">
 
+</head>
+<body onload="findAllStatus(1)">
+<div class="container">
+    <div class="row logo">
+        <div class="offset-1"></div>
+        <div class="col-2"><img src="../static/ak88 (3).png" height="160" width="160"/></div>
+        <div class="col-9 p-5"><nav class="navbar navbar-expand-lg  ">
+            <a class="navbar-brand" href="#" onclick="loadShowContent()">Trang Chủ</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#" onclick="showCreate()">Viết Blog<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
+                            Chế Độ
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <div>
+                            <a class="dropdown-item" href="#" onclick="findAllStatus(1)" >Công khai</a>
+                            <a class="dropdown-item" href="#" onclick="findAllStatus(2)" >Riêng tư</a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <div class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Nhập tên bài viết" aria-label="Search" id="key">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit" onclick="findByName()">Tìm kiếm</button>
+                </div>
+            </div>
+        </nav> </div>
+    </div>
+    <div class="row content" id="content">
+        <div class="col-12" id="blogs"></div>
+    </div>
+    <div class="row footer">
+        <div class="container-fluid padding">
+            <div class="row text-center">
+                <div class="col-md-4">
+                    <img src="../static/ak88 (3).png" height="95" width="95"/>
+                    <hr class="light">
+                    <p>333-666-999</p>
+                    <p>ak88@gmail.com</p>
+                    <p>Số nhà 23 Lô tt01 Ngõ 2 Hàm Nghi</p>
+                </div>
+                <div class="col-md-4">
+                    <p style="height: 53px"></p>
+                    <h5>Giờ làm việc</h5>
+                    <hr class="light">
+                    <p> 11pm-7am</p>
+                    <p>Mọi ngày trong tuần</p>
+                </div>
+                <div class="col-md-4">
+                    <p style="height: 53px"></p>
+                    <h5>Dịch vụ</h5>
+                    <hr class="light">
+                    <p>Tại gia</p>
+                    <p>24/7 (trong khung giờ làm việc )</p>
+                </div>
+                <div class="col-12">
+                    <hr class="light-100">
+                    <h5 style="font-size: 30px">&copy; AK88</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../scrip/ajax.js"></script>
 </body>
 </html>

@@ -37,4 +37,9 @@ public class BlogServiceImpl implements BlogService {
     public Iterable<Blog> findAllByStatus(Status status) {
         return blogRepository.findAllByStatus(status);
     }
+
+    @Override
+    public Iterable<Blog> findAllByTitleContaining(String title) {
+        return blogRepository.findAllByTitleContaining(title);
+    }
 }

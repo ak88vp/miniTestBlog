@@ -8,9 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
 import java.time.LocalDateTime;
-import java.util.Date;
 import java.util.Optional;
 
 @RestController
@@ -54,6 +52,16 @@ public class BlogController {
     public ResponseEntity<Iterable<Blog>> findAllPublic(@PathVariable Long id){
         Optional<Status> status=statusService.findById(id);
         Iterable<Blog> blogs=blogService.findAllByStatus(status.get());
+        return new ResponseEntity<>(blogs,HttpStatus.OK);
+    }
+    @GetMapping("status")
+    public ResponseEntity<Iterable<Status>> findAllStatus(){
+        Iterable<Status> statuses=statusService.findAll();
+        return new ResponseEntity<>(statuses,HttpStatus.OK);
+    }
+    @GetMapping("search")
+    public ResponseEntity<Iterable<Blog>> findByTitle(String key){
+        Iterable<Blog> blogs=blogService.findAllByTitleContaining(key);
         return new ResponseEntity<>(blogs,HttpStatus.OK);
     }
 

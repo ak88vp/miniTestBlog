@@ -1,0 +1,27 @@
+.logo {
+    background: url("https://64.media.tumblr.com/d96d6d4360f27da5c47221e68cdff36f/tumblr_olucp2SNGx1vsjcxvo1_r1_640.gifv");
+    background-size: cover;
+}
+
+.content {
+    color: rgb(77, 236, 236);
+    font-size: 25px;
+    background: url("https://thuthuatnhanh.com/wp-content/uploads/2020/10/hinh-anh-gif-thanh-pho-buon.gif");
+    background-size: cover;
+}
+
+.footer {
+    background: url("https://64.media.tumblr.com/d96d6d4360f27da5c47221e68cdff36f/tumblr_olucp2SNGx1vsjcxvo1_r1_640.gifv");
+    background-size: cover;
+    color: rgb(250, 252, 252);
+}
+
+.girl {
+    height: 300px;
+}
+
+body {
+    font-family: 'Imperial Script', cursive;
+    font-family: 'Pushster', cursive;
+
+}
