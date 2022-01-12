@@ -1,6 +1,7 @@
 package ak88.minitestblog.model;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotBlank;
 import java.time.LocalDateTime;
 
 
@@ -9,6 +10,7 @@ public class Blog {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    @NotBlank(message = " cẩn thư viện thì mới validation đc nhé ")
     private String title;
     private String content;
     private LocalDateTime time;
